@@ -6,11 +6,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class HeaderComponent {
   @Output() activeTab: EventEmitter<string> = new EventEmitter();
-  onRecipes() {
-    this.activeTab.emit('recipes');
-  }
-
-  onShoppingList() {
-    this.activeTab.emit('shopping list');
+  onSelect(selection: string) {
+    this.activeTab.emit(selection);
   }
 }
